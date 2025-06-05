@@ -9,6 +9,8 @@ import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.notepad2025.detalle.DetallePage
+import com.example.notepad2025.detalle.DetalleView
 import com.example.notepad2025.ui.theme.NotePad2025Theme
 
 class MainActivity : ComponentActivity() {
@@ -39,7 +41,7 @@ class MainActivity : ComponentActivity() {
                         val nota = listaDeNotas.first{ nota ->
                             nota.titulo == titulo
                         }
-                        DetalleDeNotaView(navController, nota)
+                        DetallePage(navController = navController, nota)
                     }
                 }
             }

@@ -45,7 +45,7 @@ fun NuevaNota(
         topBar = {
             TopAppBar(
                 title = {
-                    Text("Soy una topBar")
+                    Text("Nueva nota")
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer

@@ -94,7 +94,6 @@ fun ListaDeNotasView(
                                 text = nota.texto,
                                 style = MaterialTheme.typography.bodyMedium
                             )
-                            Text("prueba")
                         }
                     }
                     Spacer(modifier.height(15.dp))
@@ -104,7 +103,11 @@ fun ListaDeNotasView(
         Column(
             modifier = Modifier.padding(padding)
         ) {
-            Text("Soy una lista de Notas ${listaDeNotas.size}")
+            if(listaDeNotas.size == 0){
+                Text("Lista vacia")
+            }
+            //Text("Soy una lista de Notas ${listaDeNotas.size}")
+
         }
     }
 }
