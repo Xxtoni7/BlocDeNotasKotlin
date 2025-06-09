@@ -20,7 +20,7 @@ fun ListaPage(
 
 
     //A la vista le paso el estado y por funcion lamda le paso la intencion al viewModel
-    ListaView(
+    ListaDeNotasView(
         estado = viewModel.estado
     ) { intencion ->
         viewModel.ejecutar(intencion)

@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import com.example.notepad2025.Nota
-import com.example.notepad2025.detalle.DetalleIntencion
 
 import com.example.notepad2025.ui.theme.NotePad2025Theme
 
@@ -94,6 +93,11 @@ fun ResultadoView(
         modifier = modifier,
         contentPadding = PaddingValues(15.dp)
     ){
+        if(lista.isEmpty()){
+            item {
+                Text("Lista vacía")
+            }
+        }
         items(lista) { nota ->
             ElevatedCard (
                 modifier = Modifier
@@ -125,15 +129,6 @@ fun ResultadoView(
             }
             Spacer(Modifier.height(15.dp))
         }
-    }
-    Column(
-        modifier = modifier
-    ) {
-        if(lista.isEmpty()){
-            Text("Lista vacia")
-        }
-        //Text("Soy una lista de Notas ${lista.size}")
-
     }
 }
 
