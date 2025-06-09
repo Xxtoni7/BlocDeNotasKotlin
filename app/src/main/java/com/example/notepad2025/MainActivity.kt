@@ -10,7 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.notepad2025.detalle.DetallePage
-import com.example.notepad2025.detalle.DetalleView
+import com.example.notepad2025.lista.ListaPage
 import com.example.notepad2025.ui.theme.NotePad2025Theme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     startDestination = "lista"
                 ){
                     composable("lista"){
-                        ListaDeNotasView(
+                        ListaPage(
                             navController,
                             listaDeNotas
                         )

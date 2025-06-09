@@ -1,27 +1,26 @@
-package com.example.notepad2025.detalle
+package com.example.notepad2025.lista
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.notepad2025.Nota
 
 @Composable
-fun DetallePage(
+fun ListaPage(
     navController: NavController,
-    nota: Nota
-){
+    listaDeNotas: List<Nota>,
+) {
     //Instanciando el ViewModel
     val viewModel = viewModel{
-        DetalleViewModel(
-            nota = nota,
-            navController = navController
+        ListaViewModel(
+            navController = navController,
+            listaDeNotas = listaDeNotas
         )
     }
 
+
     //A la vista le paso el estado y por funcion lamda le paso la intencion al viewModel
-    DetalleView(
-        Modifier,
+    ListaView(
         estado = viewModel.estado
     ) { intencion ->
         viewModel.ejecutar(intencion)
